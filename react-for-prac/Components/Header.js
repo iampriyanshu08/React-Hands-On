@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
+import { MyContext } from "@/Helper/Context";
 
 const Header = ({number}) => {
+  const user = useContext(MyContext)
   console.log(number);
   return (
     <div className="bg-red-300 p-5">
@@ -16,7 +18,7 @@ const Header = ({number}) => {
         </div>
       </div> */}
       <h1>mai hoon header</h1>
-      <p>{number}</p>
+      <p>{user[1]}</p>
       <Navbar num = {number}/>
 
     </div>

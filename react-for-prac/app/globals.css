@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 body {
-  
+  padding: 10px;
+}
+button {
+    padding: 10px 20px;
 }
