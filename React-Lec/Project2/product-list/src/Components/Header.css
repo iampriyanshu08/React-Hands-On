@@ -1,0 +1,10 @@
+.head{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+   border: 5px solid red;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    font-weight: 900;
+}

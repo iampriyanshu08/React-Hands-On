@@ -11,6 +11,9 @@ import shoes4 from "./Assets/puma-shoes.jpeg";
 import ProductList from "./Components/ProductList";
 import Products from "./Components/Products";
 import Hooks from "./Components/Hooks";
+import Hook2 from "./Components/Hook2";
+import UseRefHook from "./Components/UseRefHook";
+import Form from "./Components/Form";
 
 const App = () => {
   const data = [
@@ -111,7 +114,10 @@ const App = () => {
         })}
       </div>
       <Footer /> */}
-      <Hooks/>
+      {/* <Hooks/> */}
+      {/* <Hook2/> */}
+      {/* <UseRefHook/> */}
+      <Form/>
 
       {/* <ProductList/>
 <Products name= {info[0].name} img={info[0].image} detail={info[0].detail} price= {info[0].price}/>   

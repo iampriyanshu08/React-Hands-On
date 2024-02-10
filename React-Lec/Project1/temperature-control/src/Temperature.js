@@ -14,6 +14,7 @@ const Temperature = ()=>{
             setColor("red")
             setstatus("Hot")
             setplus("red")
+            setminus("#f0932b")
          }
     }
     const decrement=()=>{
@@ -21,7 +22,7 @@ const Temperature = ()=>{
         if(temp<=19){
             setColor("#34495e")
             setstatus("Cold")
-            setplus("#34495e")
+            setplus("#f0932b")
             setminus("blue")
         }
     }

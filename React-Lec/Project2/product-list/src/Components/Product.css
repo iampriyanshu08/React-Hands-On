@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cards {
+  margin-top: 20px;
+  white-space: nowrap;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.images {
+    margin-top: 10px;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+ 
+h4{
+    margin-top: 5px;
+  
+}
+
+p{
+  text-wrap: wrap;
+}
+
+.card {
+    flex-wrap: wrap;
+  width: 30%;
+  height: 50%;
+  border: 5px solid red;
+  background-color: gold;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding-left: 20px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
