@@ -13,7 +13,8 @@ import Products from "./Components/Products";
 import Hooks from "./Components/Hooks";
 import Hook2 from "./Components/Hook2";
 import UseRefHook from "./Components/UseRefHook";
-import Form from "./Components/Form";
+import ControlledForm from "./Components/ControlledForm";
+import UncontrolledForm from "./Components/UncontrolledForm";
 
 const App = () => {
   const data = [
@@ -117,7 +118,8 @@ const App = () => {
       {/* <Hooks/> */}
       {/* <Hook2/> */}
       {/* <UseRefHook/> */}
-      <Form/>
+      {/* <ControlledForm/> */}
+      <UncontrolledForm/>
 
       {/* <ProductList/>
 <Products name= {info[0].name} img={info[0].image} detail={info[0].detail} price= {info[0].price}/>   
