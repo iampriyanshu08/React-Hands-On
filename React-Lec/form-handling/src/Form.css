@@ -1,5 +1,5 @@
 .form-cont {
-  height: 600px;
+  height: 550px;
   width: 500px;
   border: 1px solid gray;
   border-radius: 10px;
@@ -41,4 +41,10 @@ input {
   padding-right: 90px;
   border-radius: 5px;
   border: 1p solid lightgray;
+}
+
+span{
+  display: block;
+  color: red;
+  font-size: 12px;
 }
