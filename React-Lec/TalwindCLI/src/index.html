@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="w-[100%] h-[100vh] bg-[url('images/bg-img.jpg')] bg-no-repeat bg-center bg-cover text-white">
+        <div class="w-[100%] h-[100%] bg-[rgba(0,0,0,0.6)]">
+            <div class="flex w-[100vw] justify-between sm:px-[10%] items-center py-[20px] px-2">
+                <div>
+                    <img class="w-[150px] " src="images/logo.png" alt="">
+                </div>
+                <div class="flex justify-center gap-[20px] items-center">
+                    <div class="text-white">
+                        <select class="bg-transparent border border-white py-[5px] px-5 rounded">
+                            <option class="hover:bg-[blue] text-black hover:text-white">English</option>
+                            <option class="hover:bg-[blue] text-black hover:text-white" >Hindi</option>
+                        </select>
+                    </div>
+                    <div><button class="bg-[red] py-[5px] px-5 rounded">Sign in</button></div>
+                </div>
+            </div>
+            <div class=" w-[80%] mx-auto text-center pt-[50px] sm:pt-[10%]">
+                <h1 class="text-[40px] font-bold sm:text-[50px]">Unlimited movies, TV shows and more</h1>
+                <p class="text-[20px] pt-[20px] sm:text-[24px]">Watch anywhere. Cancel anytime.</p>
+                <p class="text-[18px] pt-[20px] sm:text-[22px]">Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-[10px] pt-[20px] ">
+                    <input class="w-[100%] py-3 px-5 sm:w-[25vw] mt-5 text-white rounded bg-[rgba(0,0,0,0.4)]" type="email" placeholder="Email address">
+                    <button class="bg-[red] px-5 py-3 rounded mt-5 ">Get Started</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
