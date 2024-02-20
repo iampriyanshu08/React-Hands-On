@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <div className="text-gray-600 body-font w-[80%] mx-auto">
+      <div className="text-gray-600 body-font w-[80%] mx-auto mt-[100px]">
         <div className="px-[16px]">
           <h2 className="title-font sm:text-4xl text-3xl mb-4 font-medium mt-8 text-gray-900">
             Boosting <span className="text-[#fbc531]">accessibility</span> for

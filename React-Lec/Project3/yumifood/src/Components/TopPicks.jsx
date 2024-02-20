@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const TopPicks = () => {
+const TopPicks = ({handleCount}) => {
   const settings = {
     dots: true,
     infinite: false,
@@ -69,7 +69,7 @@ const TopPicks = () => {
                   </p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                  <button className="bg-red-800 w-[100px] text-white rounded-md my-6 py-3  hover:text-[#fbc531] text-sm font-semibold">
+                  <button className="bg-red-800 w-[100px] text-white rounded-md my-6 py-3  hover:text-[#fbc531] text-sm font-semibold" onClick={handleCount}>
                     Add to Cart
                   </button>
                 </div>

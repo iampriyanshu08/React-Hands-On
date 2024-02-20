@@ -28,7 +28,7 @@ const Hero = () => {
   }, [slider]);
 
   return (
-    <div className="mb-[5%] ">
+    <div className="mb-[5%] mt-[100px] ">
       <div className="w-[90%] mx-auto h-[80vh] my-5 py-5 relative ">
         {ImgData.map((item, index) => (
           <div

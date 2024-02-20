@@ -3,7 +3,7 @@ import React from "react";
 const SignIn = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mb-5 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mb-5 mt-[100px] ">
         <div className="relative flex items-end px-4 pb-10 pt-60 sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24">
           <div className="absolute inset-0">
             <img

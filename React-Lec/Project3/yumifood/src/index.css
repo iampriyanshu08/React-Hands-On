@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-::selection{
-    color: orange;
+::selection {
+  color: orange;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+
