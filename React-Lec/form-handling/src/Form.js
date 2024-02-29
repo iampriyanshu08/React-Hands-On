@@ -15,6 +15,7 @@ const Form = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
+
     setuser({ ...user, [e.target.name]: e.target.value });
   };
 
@@ -31,37 +32,34 @@ const Form = () => {
     if (user.email === "") {
       // seterror({ email: "please enter a email" });
       newError.email = "please enter a email";
-    }
-    else if(user.email.indexOf("@")<=0){
+    } else if (user.email.indexOf("@") <= 0) {
       newError.email = " '@' invalid position";
-    }
-    else if((user.email.charAt(user.email.length-4)!=".") && (user.email.charAt(user.email.length-3) !=".")){
-    newError.email = " '.' invalid position";
+    } else if (
+      user.email.charAt(user.email.length - 4) != "." &&
+      user.email.charAt(user.email.length - 3) != "."
+    ) {
+      newError.email = " '.' invalid position";
     }
     if (user.mob === "") {
       // seterror({ mob: "please enter mobile number" });
       newError.mob = "please enter mobile number";
     } else if (isNaN(user.mob)) {
       newError.mob = "please enter digits only";
-    }
-     else if (user.mob.length <10) {
+    } else if (user.mob.length < 10) {
       newError.mob = "please enter  10 digit ";
     }
     if (user.pass === "") {
       // seterror({ pass: "please enter a password" });
       newError.pass = "please enter a password";
-    }
-    else if(user.pass.length <=5 || user.pass.length>15){
-      newError.pass = "password must be between 5 and 15 characters"
+    } else if (user.pass.length <= 5 || user.pass.length > 15) {
+      newError.pass = "password must be between 5 and 15 characters";
     }
     if (user.confirmPass === "") {
       // seterror({ confirmPass: "please enter a confirm password" });
       newError.confirmPass = "please enter a confirm password";
-    } 
-    else if(user.pass!= user.confirmPass){
-      newError.confirmPass = "password not match"
-    }
-    else {
+    } else if (user.pass != user.confirmPass) {
+      newError.confirmPass = "password not match";
+    } else {
       setflag(true);
     }
     seterror(newError);
