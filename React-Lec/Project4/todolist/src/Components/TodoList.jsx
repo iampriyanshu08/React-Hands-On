@@ -1,38 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import todoimg from "../assets/todopic1.webp";
 import TaskList from "./TaskList";
-import { v4 as uuidv4 } from "uuid";
+import {  useTodoContext } from "./TodoContext/TodoContext";
 
 const TodoList = () => {
-  const [activity, setActivity] = useState("");
-  const [task, settask] = useState([]);
-  const [update, setupdate] = useState(true);
-  const [edit, setedit] = useState(null);
+  const {
+    activity,
+    setActivity,
 
-  const handleUpdate = () => {
-    if(activity==""){
-      alert("please enter activity")
-    }
-    else if (!update) {
-      settask(
-        task.map((newElem) => {
-          if (newElem.id === edit) {
-            return { ...newElem, title: activity };
-          }
-          return newElem;
-        })
-      );
-      setupdate(true);
-      setActivity("");
-      setedit(null);
-    } else {
-      const allActivity = { id: uuidv4(), title: activity,complete : false };
+    update,
 
-      console.log("btn clicked");
-      settask([...task, allActivity]);
-      setActivity("");
-    }
-  };
+    handleUpdate,
+  } = useTodoContext()
 
   return (
     <div>
@@ -77,13 +56,7 @@ const TodoList = () => {
                 </button>
               )}
 
-              <TaskList
-                task={task}
-                setTask={settask}
-                setActivity={setActivity}
-                setupdate={setupdate}
-                setedit={setedit}
-              />
+              <TaskList />
             </div>
           </div>
         </div>

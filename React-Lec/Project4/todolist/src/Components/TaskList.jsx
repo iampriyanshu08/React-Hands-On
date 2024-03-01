@@ -1,54 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { CiSquareCheck } from "react-icons/ci";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import {  useTodoContext } from "./TodoContext/TodoContext";
 
-const TaskList = ({ task, setTask, setActivity, setupdate, setedit }) => {
-  
+const TaskList = () => {
+  const { task, handleRemove, handleAllRemove, handleEdit, handleComplete } =
+   useTodoContext()
+
   // const [com, setcom] = useState(false)
-  const handleRemove = (id) => {
-    const isConfirm = window.confirm("are you sure you want to remove")
-    if(isConfirm){
-      const filterItem = task.filter((elem) => id !== elem.id);
 
-      setTask(filterItem);
-    }
-   
-  };
-
-  const handleAllRemove = () => {
-    setTask([]);
-  };
-
-  const handleEdit = (id) => {
-    const findItem = task.find((element) => {
-      return id === element.id;
-    });
-    console.log(findItem);
-    setActivity(findItem.title);
-    setupdate(false);
-    setedit(id);
-  };
-
-
-  const handleComplete =(id)=>{
-       setTask(task.map((comItems)=>{
-              if(comItems.id === id){
-                return {...comItems , complete: !comItems.complete }
-              }
-              return comItems
-       }))
-  }
   return (
     <div>
       <ul>
         {task.map((item) => (
           <li
-            className={`flex justify-between border-b-2 px-2 py-1 items-center ${item.complete? 'line-through' : ""}`}
+            className={`flex justify-between border-b-2 px-2 py-1 items-center ${
+              item.complete ? "line-through" : ""
+            }`}
             key={item.id}
           >
             <div className="flex gap-3">
-              <span className="cursor-pointer" onClick={()=>handleComplete(item.id)}>
+              <span
+                className="cursor-pointer"
+                onClick={() => handleComplete(item.id)}
+              >
                 <CiSquareCheck size={25} />
               </span>
               <span>{item.title}</span>
