@@ -5,16 +5,16 @@ const reducer = (state, action) => {
   switch (action) {
     case "increment":
       if (state <= 9) {
-        return state + 1;
+        return state + 1
       } else {
-        return state;
+        return state
       }
 
     case "decrement":
       if (state >= 1) {
         return state - 1;
       } else {
-        return state;
+        return state
       }
     default:
       return state;
